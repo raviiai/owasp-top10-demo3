@@ -1,0 +1,38 @@
+input[type="button"].link, button.link {
+	border: none;
+	background: transparent;
+	font-weight: normal;
+	cursor: pointer;
+	display: inline;
+	margin: 0px;
+	padding: 0px;
+}
+
+.navbar input[type="button"].link, .navbar button.link {
+	color: #999;
+	padding: 15px 0;
+}
+
+.navbar input[type="button"].link:hover, .navbar button.link:hover {
+	color: #fff;
+}
+
+td.tight {
+	width: 1px;
+	white-space: nowrap;
+}
+
+.withdrawal {
+	color: red;
+}
+
+.withdrawal:before {
+	content: "- ";
+}
+
+.table tfoot > tr > td, .table tfoot > tr > th {
+	border-top-color: black;
+}
+.table tfoot > tr > th {
+	text-align: right;
+}
