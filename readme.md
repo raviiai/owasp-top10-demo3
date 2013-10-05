@@ -11,3 +11,6 @@ A (partial?) list of vulnerabilities in this application. References in parenthe
 - Transaction comments are open to XSS attacks (*A3 - Cross-Site Scripting*)
 - No validation that the current user owns the account from which money is sent (*A4 - Insecure Direct Object References / A7 - Missing Function Level Access Control*)
 - CSRF tokens are never validated (*A8 - Cross-Site Request Forgery*)
+
+## Get started
+Download repository and run ```composer update```. Once all dependencies have been downloaded, run ```artisan migrate --seed``` to set up the database and create some sample data.
