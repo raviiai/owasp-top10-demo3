@@ -8,6 +8,11 @@ class Account extends AbstractModel {
 		return Transaction::findByAccount($this);
 	}
 
+	public function getOwner()
+	{
+		return User::findById($this->user_id);
+	}
+
 	public function balance()
 	{
 		$in = DB::table('transactions')->where('receiver_account_id', $this->id)->sum('amount');

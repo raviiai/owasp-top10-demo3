@@ -9,9 +9,9 @@
 			@foreach ($account->transactions() as $transaction)
 			<tr>
 				<td class="tight">{{ date('Y-m-d', $transaction->created_at) }}</td>
-				<td>{{{ $transaction->text }}}</td>
+				<td>{{ $transaction->text }}</td>
 				<td class="tight {{ ($transaction->isDepositTo($account)) ? 'deposit' : 'withdrawal' }}">
-					${{{ $transaction->amount }}}
+					${{ $transaction->amount }}
 				</td>
 			</tr>
 			@endforeach

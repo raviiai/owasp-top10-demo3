@@ -16,5 +16,8 @@
 		{{ Form::close() }}
 	@else
 		<h2>Logged in</h2>
+		<ul class="list-unstyled">
+			<li>{{ HTML::linkRoute('transactions.create', 'New transaction') }}</li>
+		</ul>
 	@endif
 </aside>

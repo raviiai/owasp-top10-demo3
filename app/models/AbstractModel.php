@@ -12,10 +12,36 @@ abstract class AbstractModel {
 	}
 
 	/**
+	 * Create a new object from the current class.
+	 */
+	public static function create(array $data)
+	{
+		$obj = new static;
+		foreach ($data as $key => $value) {
+			$obj->$key = $value;
+		}
+
+		return $obj;
+	}
+
+	/**
+	 * Save object to database and set ID.
+	 */
+	public function save()
+	{
+		$id = DB::table(static::$table)->insertGetId((array)$this);
+		$this->{static::$key} = $id;
+	}
+
+	/**
 	 * Map a standard class object to the current model.
 	 */
 	protected static function map($stdObj)
 	{
+		if ($stdObj === null) {
+			return null;
+		}
+
 		if (is_array($stdObj)) {
 			$list = array();
 			foreach ($stdObj as $item) {

@@ -51,6 +51,14 @@ Log::useDailyFiles(storage_path().'/logs/'.$logFile);
 App::error(function(Exception $exception, $code)
 {
 	Log::error($exception);
+
+	if ($code === 404) {
+		return "Not found.";
+	}
+
+	if ($code === 503) {
+		return "Not authorized.";
+	}
 });
 
 /*
@@ -81,3 +89,17 @@ App::down(function()
 */
 
 require app_path().'/filters.php';
+
+/*
+|--------------------------------------------------------------------------
+| Register Extensions
+|--------------------------------------------------------------------------
+|
+| Register any manager extensions (e.g. Auth or Cache).
+|
+*/
+
+Auth::extend('bank', function($app)
+{
+	return new Bank\Auth\BankUserProvider;
+});
