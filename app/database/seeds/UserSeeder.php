@@ -10,13 +10,20 @@ class UserSeeder extends Seeder {
 	public function run()
 	{
 		$users = [
-			['username'	=> 'mal.reynolds',
+			['id'		=> 1,
+			 'username'	=> 'mal.reynolds',
 			 'name'		=> 'Malcolm Reynolds',
 			 'password'	=> sha1('serenity')
 			],
-			['username'	=> 'river.tam',
+			['id'		=> 2,
+			 'username'	=> 'river.tam',
 			 'name'		=> 'River Tam',
 			 'password'	=> sha1('miranda')
+			],
+			['id'		=> 3,
+			 'username'	=> 'evil.eve',
+			 'name'		=> 'Evil Eve',
+			 'password'	=> sha1('evil')
 			]
 		];
 

