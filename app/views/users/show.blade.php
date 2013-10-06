@@ -8,6 +8,7 @@
 		<table class="table">
 			@foreach ($user->accounts() as $account)
 			<tr>
+				<td class="tight">#{{ $account->id }}</td>
 				<td>{{ HTML::linkRoute('accounts.show', $account->name, $account->id) }}</td>
 				<td>${{{ $account->balance() }}}</td>
 			</tr>
