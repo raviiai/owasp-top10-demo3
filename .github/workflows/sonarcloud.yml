@@ -16,4 +16,4 @@ jobs:
         with:
           args: >
               -Dsonar.organization=raviai
-              -Dsonar.projectKey=raviai
+              -Dsonar.projectKey=owasp-top10-demo3
