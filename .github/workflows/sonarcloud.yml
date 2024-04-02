@@ -1,6 +1,7 @@
 name: "sonarcloud"
 on:
-  workflow_dispatch:
+  push:
+    branches: [ "main" ]
 
 jobs:
   DemoSonarCloudSCan:
@@ -17,4 +18,4 @@ jobs:
         with:
           args: >
               -Dsonar.organization=raviai
-              -Dsonar.projectKey=raviaia
+              -Dsonar.projectKey=owasp-top10-demo3
