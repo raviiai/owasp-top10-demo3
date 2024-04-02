@@ -17,4 +17,4 @@ jobs:
         with:
           args: >
               -Dsonar.organization=raviai
-              -Dsonar.projectKey=sonarcloudanalysis
+              -Dsonar.projectKey=raviai
