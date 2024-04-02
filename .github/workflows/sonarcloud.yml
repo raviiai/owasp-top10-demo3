@@ -16,4 +16,4 @@ jobs:
         with:
           args: >
               -Dsonar.organization=raviai
-              -Dsonar.projectKey=ravi
+              -Dsonar.projectKey=raviai
