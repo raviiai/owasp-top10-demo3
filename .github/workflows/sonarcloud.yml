@@ -1,4 +1,4 @@
-name: "sonar_cloud_scan_github_actions"
+name: "sonarcloud"
 on:
   workflow_dispatch:
 
@@ -10,7 +10,7 @@ jobs:
         with:
             fetch-depth: 0
       - name: SonarCloud Scan
-        #uses: sonarsource/sonarcloud-github-action@master
+        uses: sonarsource/sonarcloud-github-action@master
         env:
             GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
             SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
