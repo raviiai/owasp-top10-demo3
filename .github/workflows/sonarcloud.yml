@@ -2,7 +2,7 @@ name: "sonarcloud"
 on:
   push:
     branches:
-      - main
+      - master
 jobs:
   DemoSonarCloudSCan:
     runs-on: ubuntu-latest
